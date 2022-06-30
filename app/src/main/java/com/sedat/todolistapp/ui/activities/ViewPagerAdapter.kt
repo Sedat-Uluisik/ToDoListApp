@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.sedat.todolistapp.ui.ToDoFragment
+import com.sedat.todolistapp.ui.todofragment.ToDoFragment
 
 class ViewPagerAdapter(fragmentManager: FragmentActivity): FragmentStateAdapter(fragmentManager) {
     override fun getItemCount(): Int{

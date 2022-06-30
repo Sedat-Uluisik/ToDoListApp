@@ -2,7 +2,7 @@ package com.sedat.todolistapp
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
-import com.sedat.todolistapp.ui.ToDoFragment
+import com.sedat.todolistapp.ui.todofragment.ToDoFragment
 import javax.inject.Inject
 
 class FragmentFactoryToDo@Inject constructor(
