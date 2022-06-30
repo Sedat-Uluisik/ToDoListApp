@@ -1,11 +1,10 @@
-package com.sedat.todolistapp.ui
+package com.sedat.todolistapp.ui.todofragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sedat.todolistapp.R
 import com.sedat.todolistapp.databinding.FragmentToDoBinding
 
 

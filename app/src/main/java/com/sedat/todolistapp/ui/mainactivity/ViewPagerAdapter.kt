@@ -1,4 +1,4 @@
-package com.sedat.todolistapp.mainactivity
+package com.sedat.todolistapp.ui.mainactivity
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
