@@ -25,7 +25,7 @@ class ToDoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         arguments?.takeIf { it.containsKey("type") }?.apply {
-            binding.txtName.text = getInt("type").toString()
+            //binding.txtName.text = getInt("type").toString()
         }
     }
 

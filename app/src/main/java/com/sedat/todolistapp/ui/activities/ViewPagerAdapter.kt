@@ -1,9 +1,8 @@
-package com.sedat.todolistapp.ui.mainactivity
+package com.sedat.todolistapp.ui.activities
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.sedat.todolistapp.ui.todofragment.ToDoFragment
 

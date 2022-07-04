@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentFactory
 import com.sedat.todolistapp.ui.todofragment.ToDoFragment
 import javax.inject.Inject
 
-class FragmentFactoryToDo@Inject constructor(
+class FragmentFactoryToDo @Inject constructor(
 
 ): FragmentFactory() {
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {

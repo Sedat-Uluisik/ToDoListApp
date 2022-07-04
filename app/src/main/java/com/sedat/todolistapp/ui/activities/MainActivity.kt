@@ -1,7 +1,9 @@
-package com.sedat.todolistapp.ui.mainactivity
+package com.sedat.todolistapp.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayoutMediator
 import com.sedat.todolistapp.FragmentFactoryToDo
 import com.sedat.todolistapp.R
@@ -36,5 +38,18 @@ class MainActivity : AppCompatActivity() {
                 else -> "Daily"
             }
         }.attach()
+
+        binding.insertPlanTitleBtn.setOnClickListener {
+            showBottomSheetDialog()
+        }
+    }
+
+    private fun showBottomSheetDialog(){
+        val dialog = BottomSheetDialog(this, R.style.BottomSheetTheme)
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_layout, null)
+
+        dialog.setCancelable(true)
+        dialog.setContentView(view)
+        dialog.show()
     }
 }
