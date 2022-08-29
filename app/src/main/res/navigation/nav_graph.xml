@@ -9,20 +9,48 @@
         android:id="@+id/dailyFragment"
         android:name="com.sedat.todolistapp.ui.daily.DailyFragment"
         android:label="fragment_daily"
-        tools:layout="@layout/fragment_daily" />
+        tools:layout="@layout/fragment_daily" >
+
+        <argument
+            android:name="hideBottomNav"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
     <fragment
         android:id="@+id/weeklyFragment"
         android:name="com.sedat.todolistapp.ui.weekly.WeeklyFragment"
         android:label="fragment_weekly"
-        tools:layout="@layout/fragment_weekly" />
+        tools:layout="@layout/fragment_weekly" >
+
+        <argument
+            android:name="hideBottomNav"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
     <fragment
         android:id="@+id/monthlyFragment"
         android:name="com.sedat.todolistapp.ui.monthly.MonthlyFragment"
         android:label="fragment_monthly"
-        tools:layout="@layout/fragment_monthly" />
+        tools:layout="@layout/fragment_monthly" >
+
+        <argument
+            android:name="hideBottomNav"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
     <fragment
         android:id="@+id/yearlyFragment"
         android:name="com.sedat.todolistapp.ui.yearly.YearlyFragment"
         android:label="fragment_yearly"
-        tools:layout="@layout/fragment_yearly" />
+        tools:layout="@layout/fragment_yearly" >
+
+        <argument
+            android:name="hideBottomNav"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
 </navigation>

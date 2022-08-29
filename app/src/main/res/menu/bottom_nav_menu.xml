@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/dailyFragment"
-        android:title="@string/daily"/>
+        android:icon="@drawable/ic_daily_48"
+        android:title="@string/daily" />
     <item android:id="@+id/weeklyFragment"
-        android:title="@string/weekly"/>
+        android:title="@string/weekly"
+        android:icon="@drawable/ic_weekly_48"/>
     <item android:id="@+id/monthlyFragment"
-        android:title="@string/monthly"/>
+        android:title="@string/monthly"
+        android:icon="@drawable/ic_monthly_48"/>
     <item android:id="@+id/yearlyFragment"
-        android:title="@string/yearly"/>
+        android:title="@string/yearly"
+        android:icon="@drawable/ic_yearly_48"/>
 </menu>

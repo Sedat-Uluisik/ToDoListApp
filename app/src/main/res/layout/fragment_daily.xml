@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_purple"
     tools:context=".ui.daily.DailyFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fontFamily="@font/aclonica"
         android:text="Hello" />
 
 </FrameLayout>

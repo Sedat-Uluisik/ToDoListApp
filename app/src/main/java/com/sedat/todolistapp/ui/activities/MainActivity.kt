@@ -1,9 +1,12 @@
 package com.sedat.todolistapp.ui.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.tabs.TabLayoutMediator
 import com.sedat.todolistapp.R
 import com.sedat.todolistapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -13,19 +16,28 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var navController: NavController
+    private lateinit var navHostFragment: NavHostFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupNavigation()
     }
 
-    private fun showBottomSheetDialog(){
-        val dialog = BottomSheetDialog(this, R.style.BottomSheetTheme)
-        val view = layoutInflater.inflate(R.layout.bottom_sheet_layout, null)
+    private fun setupNavigation() {
+        navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+        navController = navHostFragment.navController
 
-        dialog.setCancelable(true)
-        dialog.setContentView(view)
-        dialog.show()
+        binding.bottomNavView.setupWithNavController(navController)
+
+        binding.bottomNavView.itemIconTintList = null
+
+        navController.addOnDestinationChangedListener { _, _, args ->
+            binding.bottomNavView.isVisible = args?.getBoolean("hideBottomNav") != true
+        }
     }
 }

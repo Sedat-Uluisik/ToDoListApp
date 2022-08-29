@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ToDoListApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.ToDoListApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -30,6 +30,27 @@
 
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:layout_height">64dp</item>
+        <item name="android:fontFamily">@font/aclonica</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
+    </style>
+
+    <style name="BottomNavigationView.TextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/aclonica</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
     </style>
 
 </resources>
