@@ -7,6 +7,7 @@
     <item android:id="@+id/weeklyFragment"
         android:title="@string/weekly"
         android:icon="@drawable/ic_weekly_48"/>
+
     <item android:id="@+id/monthlyFragment"
         android:title="@string/monthly"
         android:icon="@drawable/ic_monthly_48"/>

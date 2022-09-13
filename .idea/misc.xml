@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/drawable/add_circle_icon_24.xml" value="0.1275" />
+        <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/drawable/alert_dialog_background.xml" value="0.1235" />
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/drawable/app_bar_background.xml" value="0.1275" />
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/drawable/arrow_right_24.xml" value="0.125" />
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/drawable/bottom_nav_item_background.xml" value="0.125" />
@@ -21,6 +22,7 @@
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/fragment_to_do.xml" value="0.2" />
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/fragment_weekly.xml" value="0.2" />
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/fragment_yearly.xml" value="0.1859375" />
+        <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/item_layout_add_for_alert_dialog.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/setsi/AndroidStudioProjects/ToDoListApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
       </map>
     </option>

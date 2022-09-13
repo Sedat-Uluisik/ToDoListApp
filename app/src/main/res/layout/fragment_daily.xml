@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_purple"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/daily_2"
     tools:context=".ui.daily.DailyFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_daily"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fontFamily="@font/aclonica"
-        android:text="Hello" />
+        android:layout_height="match_parent"/>
 
-</FrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/rv_daily"
+        app:layout_anchorGravity="bottom|end"
+        app:fabSize="normal"
+        android:layout_margin="16dp"
+        app:elevation="0dp"
+        app:maxImageSize="56dp"
+        android:scaleType="center"
+        app:tint="@null"
+        app:backgroundTint="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_add_daily72" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
