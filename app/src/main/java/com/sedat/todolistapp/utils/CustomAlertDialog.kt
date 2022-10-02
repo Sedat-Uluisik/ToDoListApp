@@ -42,6 +42,7 @@ class CustomAlertDialog {
                 edittextTitle.text?.let {
                     if(it.isNotEmpty()){
                         listener.insertBtnClick(it.toString())
+                        dialog.dismiss()
                     }else
                         Toast.makeText(context, "Title field cannot be empty", Toast.LENGTH_SHORT).show()
                 }

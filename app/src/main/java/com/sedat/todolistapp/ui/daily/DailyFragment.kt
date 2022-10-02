@@ -10,6 +10,7 @@ import com.sedat.todolistapp.R
 import com.sedat.todolistapp.utils.CustomAlertDialog
 import com.sedat.todolistapp.databinding.FragmentDailyBinding
 import com.sedat.todolistapp.listener.CustomAlertDialogListener
+import com.sedat.todolistapp.utils.DeviceUtils
 import com.sedat.todolistapp.utils.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,6 +23,8 @@ class DailyFragment : Fragment(R.layout.fragment_daily), CustomAlertDialogListen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        DeviceUtils.closeKeyboard(requireActivity())
+
 
         binding.fabDaily.setOnClickListener {
             CustomAlertDialog().showAlertDialog(requireContext(), ContextCompat.getColor(requireContext(), R.color.daily_3), this)
@@ -29,7 +32,9 @@ class DailyFragment : Fragment(R.layout.fragment_daily), CustomAlertDialogListen
     }
 
     override fun insertBtnClick(title: String) {
-        Toast.makeText(requireContext(), title, Toast.LENGTH_SHORT).show()
+        viewModel.insertTitle(title).observe(viewLifecycleOwner){
+            println(it)
+        }
     }
 
 }
