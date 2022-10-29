@@ -12,6 +12,8 @@ data class Title(
     val Id: Int,
     @ColumnInfo(name = "title")
     val titleText: String,
+    @ColumnInfo(name = "category")
+    val category: Int
 //    val nextToDo: String ?= null,
 //    val nextToDoTime: Long ?= null,
 //    val totalToDo: Int ?= null,

@@ -4,6 +4,7 @@ import com.sedat.todolistapp.database.dao.ToDoDao
 import com.sedat.todolistapp.model.Title
 import com.sedat.todolistapp.utils.Resource
 import com.sedat.todolistapp.utils.getResourceByDatabaseRequest
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class ToDoRepositoryImpl @Inject constructor(
@@ -13,6 +14,10 @@ class ToDoRepositoryImpl @Inject constructor(
         return getResourceByDatabaseRequest {
             dao.insertTitle(title)
         }
+    }
+
+    override fun getTitles(category: Int): Flow<List<Title>> {
+        return dao.getTitles(category)
     }
 
 }

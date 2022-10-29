@@ -7,7 +7,10 @@ import androidx.lifecycle.viewModelScope
 import com.sedat.todolistapp.data.repository.ToDoRepository
 import com.sedat.todolistapp.model.Title
 import com.sedat.todolistapp.utils.Resource
+import com.sedat.todolistapp.utils.Status
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -16,12 +19,17 @@ class DailyViewModel @Inject constructor(
     private val repository: ToDoRepository
 ) : ViewModel() {
 
+    init {
+        getDailyTitleList()
+    }
+
     fun insertTitle(title: String): LiveData<Long?>{
         val data = MutableLiveData<Long?>()
         viewModelScope.launch {
             val newTitle = Title(
                 0,
-                title
+                title,
+                1
             )
             when(val response =  repository.insertTitle(newTitle)){
                 is Resource.Loading ->{
@@ -38,6 +46,22 @@ class DailyViewModel @Inject constructor(
         return data
     }
 
+    private val _titleList = MutableLiveData(TitleState(true, listOf(), ""))
+    val titleList: LiveData<TitleState> get() = _titleList
+
+    private fun getDailyTitleList() = viewModelScope.launch{
+
+        delay(2000)
+
+        try {
+            val response = repository.getTitles(1)
+            response.collect{ list ->
+                _titleList.value = TitleState(false, list, null)
+            }
+        }catch (e: Exception){
+            _titleList.value = TitleState(null, null, e.message)
+        }
+    }
 }
 
 data class TitleState(
